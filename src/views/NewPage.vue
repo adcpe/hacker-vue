@@ -1,5 +1,5 @@
 <script setup>
-import StoryComp from '../components/StoryComp.vue'
+import StoryItem from '../components/StoryItem.vue'
 import { reactive } from 'vue'
 import { getData } from '../utils/api'
 
@@ -19,7 +19,7 @@ getData('newstories').then((res) => {
 <template>
   <div>
     <ul>
-      <StoryComp v-for="(item, i) in items" :key="i" :item="item" />
+      <StoryItem v-for="(item, i) in items" :key="i" :item="item" />
     </ul>
   </div>
 </template>
