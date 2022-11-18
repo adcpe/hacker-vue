@@ -6,32 +6,32 @@ const listItems = [
   {
     name: 'new',
     resource: 'newstories',
-    to: 'new'
+    to: '/new'
   },
   {
     name: 'top',
     resource: 'topstories',
-    to: 'top'
+    to: '/top'
   },
   {
     name: 'best',
     resource: 'beststories',
-    to: 'best'
+    to: '/best'
   },
   {
     name: 'ask',
     resource: 'askstories',
-    to: 'ask'
+    to: '/ask'
   },
   {
     name: 'show',
     resource: 'showstories',
-    to: 'show'
+    to: '/show'
   },
   {
     name: 'jobs',
     resource: 'jobstories',
-    to: 'jobs'
+    to: '/jobs'
   }
 ]
 </script>
