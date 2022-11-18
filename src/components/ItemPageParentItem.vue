@@ -4,7 +4,6 @@ import { timePassed } from '../utils/time'
 
 const route = useRoute()
 
-console.log(route)
 const props = defineProps(['story'])
 </script>
 
