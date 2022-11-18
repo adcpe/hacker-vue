@@ -16,9 +16,32 @@ export function timePassed(time) {
   }
 }
 
+export function convertUnixTime(time) {
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]
+
+  const date = new Date(time * 1000)
+
+  const year = date.getUTCFullYear()
+  const month = date.getUTCMonth()
+  const day = date.getUTCDate()
+
+  return `${months[month]} ${day}, ${year}`
+}
+
 function pluralize(time, label) {
-  if (time === 1) {
-    return time + label
-  }
+  if (time === 1) return time + label
   return time + label + 's'
 }

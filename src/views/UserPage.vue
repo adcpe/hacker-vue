@@ -2,8 +2,14 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { getData } from '../utils/api'
+import { timePassed, convertUnixTime } from '../utils/time'
 
-const user = ref({})
+const user = ref({
+  created: '',
+  id: '',
+  karma: '',
+  about: ''
+})
 const route = useRoute()
 
 getData(route.params.id, 'user').then((res) => (user.value = res))
@@ -17,7 +23,9 @@ getData(route.params.id, 'user').then((res) => (user.value = res))
     </div>
     <div class="flex flex-row my-2">
       <div class="font-bold w-20">Created:</div>
-      <div>{{ user.created }}</div>
+      <div v-if="user.created !== ''">
+        {{ convertUnixTime(user.created) }} ({{ timePassed(user.created) }} ago)
+      </div>
     </div>
     <div class="flex flex-row my-2">
       <div class="font-bold w-20">Karma:</div>
