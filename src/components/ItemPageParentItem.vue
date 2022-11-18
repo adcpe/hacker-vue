@@ -1,8 +1,6 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import { timePassed } from '../utils/time'
-
-const route = useRoute()
 
 const props = defineProps(['story'])
 </script>
@@ -13,10 +11,7 @@ const props = defineProps(['story'])
     <div class="mt-1 mb-3 opacity-50">
       {{ story.score }} points | by
       <RouterLink class="underline" :to="'/user/' + story.by">{{ story.by }}</RouterLink> |
-      {{ timePassed(story.time) }} ago |
-      <RouterLink class="underline" :to="route.fullPath">
-        {{ story.descendants }} comments
-      </RouterLink>
+      {{ timePassed(story.time) }} ago | {{ story.descendants }} comments
     </div>
     <p class="text-lg" v-html="story.text" />
   </div>
