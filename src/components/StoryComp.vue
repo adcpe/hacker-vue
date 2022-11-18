@@ -2,8 +2,6 @@
 import { RouterLink } from 'vue-router'
 import { host, timePassed } from '../utils/time'
 const props = defineProps(['item'])
-// console.log('host(item.url)')
-// console.log(host(item.url))
 </script>
 
 <template>
@@ -11,6 +9,7 @@ const props = defineProps(['item'])
     <div class="flex items-center justify-center w-24 text-violet-500 font-medium">
       <span v-if="item.type !== 'job'" class="score">{{ item.score }}</span>
     </div>
+
     <div>
       <span class="flex flex-row">
         <div>
@@ -22,6 +21,7 @@ const props = defineProps(['item'])
           </span>
         </div>
       </span>
+
       <span class="opacity-50">
         <span v-if="item.type !== 'job'">
           by <RouterLink class="underline" :to="'/user/' + item.by">{{ item.by }}</RouterLink> |
@@ -37,13 +37,3 @@ const props = defineProps(['item'])
     </div>
   </li>
 </template>
-
-<style scoped>
-/* li {
-  background-color: #e5e5e550;
-  text-align: left;
-  padding-left: 5rem;
-  margin: 1px auto;
-  list-style: none;
-} */
-</style>

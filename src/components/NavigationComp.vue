@@ -37,7 +37,7 @@ const listItems = [
 </script>
 
 <template>
-  <nav class="flex flex-row justify-between bg-violet-500 text-zinc-200 px-6">
+  <nav>
     <div class="flex flex-row items-center cursor-pointer text-2xl font-semibold">
       <RouterLink :to="'/'">
         <h1>Hacker Vue</h1>
