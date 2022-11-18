@@ -4,32 +4,32 @@ const props = defineProps(['getNews'])
 
 const listItems = [
   {
-    name: 'New',
+    name: 'new',
     resource: 'newstories',
     to: 'new'
   },
   {
-    name: 'Top',
+    name: 'top',
     resource: 'topstories',
     to: 'top'
   },
   {
-    name: 'Best',
+    name: 'best',
     resource: 'beststories',
     to: 'best'
   },
   {
-    name: 'Ask',
+    name: 'ask',
     resource: 'askstories',
     to: 'ask'
   },
   {
-    name: 'Show',
+    name: 'show',
     resource: 'showstories',
     to: 'show'
   },
   {
-    name: 'Jobs',
+    name: 'jobs',
     resource: 'jobstories',
     to: 'jobs'
   }
