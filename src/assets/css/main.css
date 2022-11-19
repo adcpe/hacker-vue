@@ -6,3 +6,15 @@
   color: #242424;
   background-color: rgb(221 214 254);
 }
+
+pre {
+  overflow: auto;
+  padding: 2px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+pre > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
