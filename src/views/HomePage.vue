@@ -17,7 +17,6 @@ const resources = {
 }
 
 async function initData(resource) {
-  console.log('zero')
   await getData(resource).then((res) => {
     const stories = res.slice(0, 25)
     stories.forEach(async (item) => {
