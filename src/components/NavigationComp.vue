@@ -1,6 +1,8 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 const props = defineProps(['getNews'])
+
+const fullPath = useRoute().fullPath
 
 const listItems = [
   {
@@ -39,9 +41,9 @@ const listItems = [
 <template>
   <nav>
     <div class="flex flex-row items-center cursor-pointer text-2xl font-semibold">
-      <RouterLink :to="'/'">
+      <a :href="fullPath">
         <h1>Hacker Vue</h1>
-      </RouterLink>
+      </a>
     </div>
     <div>
       <ul class="list-none flex flex-row items-center h-12 text-xl font-medium">
