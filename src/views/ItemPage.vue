@@ -1,11 +1,10 @@
 <script setup>
-import { onUnmounted, ref } from 'vue'
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { getData } from '../utils/api'
-import ParentItem from '../components/ItemPageParentItem.vue'
+import Parent from '../components/StoryPageParent.vue'
 import CommentsSection from '../components/CommentsSection.vue'
 
-const route = useRoute()
 const story = ref({
   by: '',
   descendants: '',
@@ -18,10 +17,10 @@ const story = ref({
   type: 'story'
 })
 
-getData(route.params.id, 'item').then((res) => (story.value = res))
+getData(useRoute().params.id, 'item').then((res) => (story.value = res))
 </script>
 
 <template>
-  <ParentItem :story="story" />
+  <Parent :story="story" />
   <CommentsSection :kids="story.kids" />
 </template>
