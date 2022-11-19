@@ -18,3 +18,12 @@ pre > code {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+p > a {
+  text-decoration: underline;
+}
+
+p > a:visited,
+.story-link:visited {
+  color: #777777;
+}

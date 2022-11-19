@@ -6,14 +6,16 @@ const props = defineProps(['item'])
 
 <template>
   <li class="flex flex-row bg-violet-50 py-3 border-b-zinc-200 border-b text-lg">
-    <div class="flex items-center justify-center w-24 text-violet-500 font-medium">
+    <div class="flex items-center justify-center w-24 text-violet-500 text-xl">
       <span v-if="item.type !== 'job'" class="score">{{ item.score }}</span>
     </div>
 
     <div>
-      <span class="flex flex-row">
+      <span class="flex flex-row text-lg">
         <div>
-          <a :href="item.url ? item.url : '/item/' + item.id">{{ item.title }}</a>
+          <a class="story-link" :href="item.url ? item.url : '/item/' + item.id">
+            {{ item.title }}
+          </a>
         </div>
         <div>
           <span class="ml-2 text-sm opacity-40 leading-3">
@@ -22,7 +24,7 @@ const props = defineProps(['item'])
         </div>
       </span>
 
-      <span class="opacity-50">
+      <span class="text-base opacity-50">
         <span v-if="item.type !== 'job'">
           by <RouterLink class="underline" :to="'/user/' + item.by">{{ item.by }}</RouterLink> |
         </span>
