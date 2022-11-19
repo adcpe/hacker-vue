@@ -5,7 +5,7 @@ const props = defineProps(['item'])
 </script>
 
 <template>
-  <li class="flex flex-row bg-zinc-300 py-3 border-b-zinc-200 border-b text-lg">
+  <li class="flex flex-row bg-violet-50 py-3 border-b-zinc-200 border-b text-lg">
     <div class="flex items-center justify-center w-24 text-violet-500 font-medium">
       <span v-if="item.type !== 'job'" class="score">{{ item.score }}</span>
     </div>

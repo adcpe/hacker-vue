@@ -16,7 +16,7 @@ getData(route.params.id, 'user').then((res) => (user.value = res))
 </script>
 
 <template>
-  <div class="min-h-[25vh] bg-zinc-300 p-4">
+  <div class="min-h-[25vh] bg-violet-50 p-4">
     <div class="flex flex-row my-2">
       <div class="font-bold w-20">User:</div>
       <div>{{ user.id }}</div>

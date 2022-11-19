@@ -6,7 +6,7 @@ const props = defineProps(['story'])
 </script>
 
 <template>
-  <div class="bg-zinc-300 px-6 py-4">
+  <div class="bg-violet-50 px-6 py-4">
     <h1 class="text-2xl font-bold">{{ story.title }}</h1>
     <div class="mt-1 mb-3 opacity-50">
       {{ story.score }} points | by

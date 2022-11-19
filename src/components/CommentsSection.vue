@@ -5,7 +5,7 @@ const props = defineProps(['kids'])
 </script>
 
 <template>
-  <div class="bg-zinc-300 my-1 px-6">
+  <div class="bg-violet-50 my-1 px-6">
     <Comment v-for="kid in kids" :kid="kid" />
   </div>
 </template>
