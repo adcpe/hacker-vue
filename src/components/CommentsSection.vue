@@ -9,5 +9,3 @@ const props = defineProps(['kids'])
     <Comment v-for="kid in kids" :kid="kid" />
   </div>
 </template>
-
-<style lang="scss" scoped></style>

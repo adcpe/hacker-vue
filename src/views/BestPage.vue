@@ -23,5 +23,3 @@ getData('beststories').then((res) => {
     </ul>
   </div>
 </template>
-
-<style scoped></style>

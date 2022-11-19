@@ -27,5 +27,3 @@ getData(props.kid, 'item').then((res) => {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

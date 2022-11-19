@@ -25,5 +25,3 @@ getData(route.params.id, 'item').then((res) => (story.value = res))
   <ParentItem :story="story" />
   <CommentsSection :kids="story.kids" />
 </template>
-
-<style lang="scss" scoped></style>

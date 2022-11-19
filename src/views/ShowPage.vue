@@ -23,5 +23,3 @@ getData('showstories').then((res) => {
     </ul>
   </div>
 </template>
-
-<style scoped></style>

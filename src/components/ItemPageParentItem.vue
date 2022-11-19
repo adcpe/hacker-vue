@@ -16,5 +16,3 @@ const props = defineProps(['story'])
     <p class="text-lg" v-html="story.text" />
   </div>
 </template>
-
-<style lang="scss" scoped></style>
