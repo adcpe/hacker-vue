@@ -1,8 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { getData } from '../utils/api'
 import ParentItem from '../components/ItemPageParentItem.vue'
+import CommentsSection from '../components/CommentsSection.vue'
 
 const route = useRoute()
 const story = ref({
@@ -22,6 +23,7 @@ getData(route.params.id, 'item').then((res) => (story.value = res))
 
 <template>
   <ParentItem :story="story" />
+  <CommentsSection :kids="story.kids" />
 </template>
 
 <style lang="scss" scoped></style>
