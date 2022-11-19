@@ -21,7 +21,7 @@ getData(props.kid, 'item').then((res) => {
       {{ ' ' }}
       {{ timePassed(comment.time) }} ago
     </div>
-    <p class="mb-2 text-lg" v-html="comment.text" />
+    <p class="mb-2 text-lg leading-relaxed" v-html="comment.text" />
     <div class="ml-8" v-for="ck in comment.kids">
       <Comment :kid="ck" />
     </div>
