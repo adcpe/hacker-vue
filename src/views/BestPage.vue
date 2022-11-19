@@ -6,7 +6,7 @@ import { getData } from '../utils/api'
 const items = reactive([])
 
 getData('beststories').then((res) => {
-  const stories = res.slice(0, 30)
+  const stories = res.slice(0, 25)
 
   stories.forEach((item) => {
     getData(item, 'item').then((res) => {
