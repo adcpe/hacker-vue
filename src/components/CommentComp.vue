@@ -9,9 +9,7 @@ const props = defineProps(['kid'])
 
 const comment = ref({})
 
-getData(props.kid, 'item').then((res) => {
-  comment.value = res
-})
+getData(props.kid, 'item').then((res) => (comment.value = res))
 </script>
 
 <template>
