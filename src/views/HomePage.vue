@@ -31,9 +31,7 @@ onBeforeMount(() => initData(resources[useRoute().path]))
 </script>
 
 <template>
-  <div>
-    <ul>
-      <StoryItem v-for="(item, i) in items" :key="i" :item="item" />
-    </ul>
-  </div>
+  <ul>
+    <StoryItem v-for="(item, i) in items" :key="i" :item="item" />
+  </ul>
 </template>
