@@ -40,14 +40,14 @@ const listItems = [
 
 <template>
   <nav>
-    <div class="flex flex-row items-center cursor-pointer text-2xl font-semibold">
+    <div class="flex flex-row items-center cursor-pointer text-xl xl:text-2xl font-semibold">
       <a :href="fullPath">
         <h1>Hacker Vue</h1>
       </a>
     </div>
     <div>
-      <ul class="list-none flex flex-row items-center h-12 text-xl font-medium">
-        <li v-for="(item, i) in listItems" :key="i" class="mx-2">
+      <ul class="list-none flex flex-row items-center h-12 text-sm xl:text-xl font-medium">
+        <li v-for="(item, i) in listItems" :key="i" class="mx-1 xl:mx-2">
           <RouterLink :to="item.to">
             {{ item.name }}
           </RouterLink>
