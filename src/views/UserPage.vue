@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { getData } from '../utils/api'
 import { timePassed, convertUnixTime } from '../utils/time'
@@ -12,7 +12,11 @@ const user = ref({
 })
 const route = useRoute()
 
-getData(route.params.id, 'user').then((res) => (user.value = res))
+async function initData(resource) {
+  await getData(resource, 'user').then((res) => (user.value = res))
+}
+
+onBeforeMount(() => initData(route.params.id, 'user'))
 </script>
 
 <template>

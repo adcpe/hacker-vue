@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { getData } from '../utils/api'
 import Parent from '../components/StoryPageParent.vue'
@@ -17,7 +17,11 @@ const story = ref({
   type: 'story'
 })
 
-getData(useRoute().params.id, 'item').then((res) => (story.value = res))
+async function initData(resource) {
+  await getData(resource, 'item').then((res) => (story.value = res))
+}
+
+onBeforeMount(() => initData(useRoute().params.id, 'item'))
 </script>
 
 <template>
