@@ -12,8 +12,8 @@ const router = createRouter({
     { path: '/ask', component: HomePage },
     { path: '/show', component: HomePage },
     { path: '/jobs', component: HomePage },
-    { path: '/item/:id', component: import('../views/ItemPage.vue') },
-    { path: '/user/:id', component: import('../views/UserPage.vue') }
+    { path: '/item/:id', component: () => import('../views/ItemPage.vue') },
+    { path: '/user/:id', component: () => import('../views/UserPage.vue') }
   ]
 })
 
