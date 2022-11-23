@@ -7,7 +7,6 @@ const router = createRouter({
   routes: [
     { path: '/', component: HomePage },
     { path: '/new', component: HomePage },
-    { path: '/top', component: HomePage },
     { path: '/best', component: HomePage },
     { path: '/ask', component: HomePage },
     { path: '/show', component: HomePage },

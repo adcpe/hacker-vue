@@ -14,12 +14,12 @@ getData(props.kid, 'item').then((res) => (comment.value = res))
 
 <template>
   <div class="py-2">
-    <div class="opacity-50 mb-2">
+    <div class="opacity-50 mb-2 text-sm xl:text-lg">
       <RouterLink class="underline" :to="'/user/' + comment.by">{{ comment.by }}</RouterLink>
       {{ ' ' }}
       {{ timePassed(comment.time) }} ago
     </div>
-    <p class="mb-2 text-base xl:text-lg leading-relaxed" v-html="comment.text" />
+    <p class="mb-2 text-sm xl:text-lg leading-relaxed" v-html="comment.text" />
     <div class="ml-4 xl:ml-6" v-for="ck in comment.kids">
       <Comment :kid="ck" />
     </div>

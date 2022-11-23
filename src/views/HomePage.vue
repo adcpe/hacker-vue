@@ -8,7 +8,6 @@ const items = reactive([])
 
 const resources = {
   '/': 'topstories',
-  '/top': 'topstories',
   '/new': 'newstories',
   '/best': 'beststories',
   '/ask': 'askstories',

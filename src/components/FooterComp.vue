@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center py-2 bg-violet-500 text-zinc-200 px-6 text-sm">
+  <div class="text-center py-2 bg-violet-500 text-zinc-200 px-6 text-xs">
     <p class="my-1">
       Made with
       <a

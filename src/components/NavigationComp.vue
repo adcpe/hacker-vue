@@ -11,11 +11,6 @@ const listItems = [
     to: '/new'
   },
   {
-    name: 'top',
-    resource: 'topstories',
-    to: '/top'
-  },
-  {
     name: 'best',
     resource: 'beststories',
     to: '/best'

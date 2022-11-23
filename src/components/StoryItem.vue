@@ -5,16 +5,16 @@ const props = defineProps(['item'])
 </script>
 
 <template>
-  <li class="flex flex-row bg-violet-50 py-3 border-b-zinc-200 border-b text-lg">
+  <li class="flex flex-row bg-violet-50 py-3 border-b-zinc-200 border-b">
     <table>
       <tbody>
         <tr>
           <td
-            class="align-middle text-center justify-center w-20 text-violet-500 text-base xl:text-xl">
+            class="align-middle text-center justify-center w-16 text-violet-500 text-base xl:text-xl">
             <span v-if="item.type !== 'job'" class="score">{{ item.score }}</span>
           </td>
           <td>
-            <span class="flex flex-row text-lg">
+            <span class="flex flex-row text-sm xl:text-lg">
               <div>
                 <a class="story-link" :href="item.url ? item.url : '/item/' + item.id">
                   {{ item.title }}
@@ -25,7 +25,7 @@ const props = defineProps(['item'])
               </div>
             </span>
 
-            <span class="text-base opacity-50">
+            <span class="text-xs xl:text-base opacity-50">
               <span v-if="item.type !== 'job'">
                 by
                 <RouterLink class="underline" :to="'/user/' + item.by">{{ item.by }}</RouterLink> |
