@@ -5,31 +5,11 @@ const props = defineProps(['getNews'])
 const fullPath = useRoute().fullPath
 
 const listItems = [
-  {
-    name: 'new',
-    resource: 'newstories',
-    to: '/new'
-  },
-  {
-    name: 'best',
-    resource: 'beststories',
-    to: '/best'
-  },
-  {
-    name: 'ask',
-    resource: 'askstories',
-    to: '/ask'
-  },
-  {
-    name: 'show',
-    resource: 'showstories',
-    to: '/show'
-  },
-  {
-    name: 'jobs',
-    resource: 'jobstories',
-    to: '/jobs'
-  }
+  { name: 'new', resource: 'newstories', to: '/new' },
+  { name: 'best', resource: 'beststories', to: '/best' },
+  { name: 'ask', resource: 'askstories', to: '/ask' },
+  { name: 'show', resource: 'showstories', to: '/show' },
+  { name: 'jobs', resource: 'jobstories', to: '/jobs' }
 ]
 </script>
 
